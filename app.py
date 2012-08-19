@@ -25,7 +25,7 @@ def run():
 
 	client = twilio_init()
 
-	for name, tel in data.iteritems():
+	for name, tel in sorted(data.iteritems()):
 		print "Sending SMS to: " + name
 		send_sms(client, tel, "Hello Twilio")
 
